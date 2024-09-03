@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--Cream);
+}
+
+:root {
+
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --font1: "Fraunces", serif;
+    --font2: "Montserrat", sans-serif;
+
+}
+
+/* The Set UP  */
+h1 {
+    color: var(--Very-dark-blue);
+    font-family: var(--font1);
+    line-height: 32px;
+}
+
+p {
+    font-family: var(--font2);
+    color: var(--Dark-grayish-blue);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.btn {
+    width: 100%;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+    font-family: var(--font2);
+    display: flex;
+    justify-content: center;
+
+}
+
+.btn:hover {
+    background-color: rgb(26, 64, 49);
+    transition-duration: 0.4s;
+}
+
+.mp {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gab {
+    margin-bottom: 25px;
+}
+
+/* -------------------- */
+
+/* Start Card */
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+    background-color: var(--White);
+    border-radius: 10px;
+}
+
+.card img {
+    max-width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card-details {
+    margin: 8px 2rem 5px;
+    align-self: center;
+}
+
+.up {
+    margin: 20px 0;
+    letter-spacing: 5px;
+    font-size: 12px;
+}
+
+.price-area {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.new-price {
+    color: var(--Dark-cyan);
+    font-family: var(--font1);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.og-price {
+    margin-left: 25px;
+}
+
+svg {
+    margin-right: 10px;
+}
+
+/* End Card */
+
+/* Responsive Start*/
+@media (max-width: 650px) {
+    .pc {
+        display: none;
+    }
+
+    .mp {
+        display: block;
+    }
+
+
+    .card {
+        grid-template-columns: 1fr;
+        max-width: 335px;
+    }
+
+    .card img {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+
+    .card-details {
+        margin: 8px 22px 5px;
+    }
+
+    .gab {
+        margin-bottom: 20px;
+    }
+
+    .up {
+        margin: 10px 0;
+    }
+}
+
+/* Responsive End*/
